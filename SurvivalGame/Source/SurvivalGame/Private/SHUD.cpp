@@ -40,7 +40,9 @@ void ASHUD::DrawCenterDot()
 			// Boost size when hovering over a switchable object.
 			ASUsableActor* usable = Pawn->GetUsableInView();
 			if (usable)
+			{
 				CenterDotScale *= 1.5f;
+			}
 
 			Canvas->SetDrawColor(255, 255, 255, 255);
 			Canvas->DrawIcon(CenterDotIcon,

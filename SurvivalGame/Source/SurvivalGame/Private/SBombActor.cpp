@@ -69,7 +69,7 @@ void ASBombActor::OnExplode()
 
 	// Apply damage to player, enemies and environmental objects
 	TArray<AActor*> IgnoreActors;
-	UGameplayStatics::ApplyRadialDamage(this, ExplosionDamage, GetActorLocation(), ExplosionRadius, DamageType, IgnoreActors, this, NULL);
+	UGameplayStatics::ApplyRadialDamage(this, ExplosionDamage, GetActorLocation(), ExplosionRadius, DamageType, IgnoreActors, this, nullptr);
 
 	// TODO: Deal Damage to objects that support it
 	// TODO: Apply radial impulse to supporting objects

@@ -163,7 +163,9 @@ ASUsableActor* ASCharacter::GetUsableInView()
 	FRotator CamRot;
 
 	if (Controller == NULL)
+	{
 		return NULL;
+	}
 
 	Controller->GetPlayerViewPoint(CamLoc, CamRot);
 	const FVector TraceStart = CamLoc;
@@ -323,7 +325,9 @@ void ASCharacter::SetSprinting(bool NewSprinting)
 	bWantsToRun = NewSprinting;
 
 	if (bIsCrouched)
+	{
 		UnCrouch();
+	}
 
 	// TODO: Stop weapon fire
 
@@ -361,7 +365,9 @@ bool ASCharacter::ServerSetSprinting_Validate(bool NewSprinting)
 bool ASCharacter::IsSprinting() const
 {
 	if (!GetCharacterMovement())
+	{
 		return false;
+	}
 
 	return bWantsToRun && !IsTargeting() && !GetVelocity().IsZero() 
 		// Don't allow sprint while strafing sideways or standing still (1.0 is straight forward, -1.0 is backward while near 0 is sideways or standing still)

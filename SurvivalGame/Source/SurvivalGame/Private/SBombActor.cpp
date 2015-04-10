@@ -57,7 +57,9 @@ void ASBombActor::OnUsed(APawn* InstigatorPawn)
 void ASBombActor::OnExplode()
 {
 	if (bExploded)
+	{
 		return;
+	}
 
 	// Notify the clients to simulate the explosion
 	bExploded = true;

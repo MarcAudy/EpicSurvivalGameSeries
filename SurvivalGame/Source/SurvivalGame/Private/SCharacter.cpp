@@ -162,9 +162,9 @@ ASUsableActor* ASCharacter::GetUsableInView()
 	FVector CamLoc;
 	FRotator CamRot;
 
-	if (Controller == NULL)
+	if (Controller == nullptr)
 	{
-		return NULL;
+		return nullptr;
 	}
 
 	Controller->GetPlayerViewPoint(CamLoc, CamRot);
